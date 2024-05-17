@@ -59,10 +59,10 @@ a{
 }
 
 input[type="text"]{
+    max-width: 135px;
     flex-grow: 1;
-    padding:10px;
     border:none;
-    font-size: 18px;
+    font-size: 10px;
     outline: none;
     transition: border-color 0.3s ease;
 }
@@ -100,10 +100,16 @@ section ul {
 
 section ul li{
     list-style: none;
-    background: #a2a8ad;
-    padding:10px 10px;
-    margin:5px;
-    border-radius: 4px;
+    background: #1b73bb;
+    padding:10px 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    justify-content: center;
+    justify-items: center;
+    margin:15px;
+    border: 40px;
+    border-radius: 10px;
     cursor: pointer;
 }
 

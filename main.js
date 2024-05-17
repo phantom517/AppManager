@@ -2,9 +2,6 @@ const TaskInput = document.getElementById("taskInput");
 const tasklist = document.getElementById("tasklist");
 const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-
-
-
 let header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
@@ -14,7 +11,12 @@ window.addEventListener("scroll", () => {
 function addTask() {
     const taskText = TaskInput.value.trim();
     if (taskText === "") return;
-    const task = { text: taskText };
+    
+    const Classnamee = document.getElementsByClassName("class") // Get the current value of class select element
+    const Classname = Classnamee.value
+
+    
+    const task = { text: taskText, class: Classname }; // Include the class name in the task object
     tasks.push(task);
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -47,6 +49,8 @@ function displayTasks() {
     tasks.forEach((task, index) => {
         const li = document.createElement("li");
         const taskText = task.text;
+        const Classname = task.class; // Retrieve class name from task object
+
         const chunks = [];
 
         // Split task text into chunks of 50 characters each
@@ -54,14 +58,12 @@ function displayTasks() {
             chunks.push(taskText.substring(i, i + 50));
         }
 
-        let mode = prompt("Enter the class/mode you want this student to be!")
-
         // Join chunks with <br> tags
         const taskHTML = chunks.join("<br>");
 
         li.innerHTML = `
-        <div class="itemBox ${mode}">>
-            <p>${taskHTML}</p>
+        <div class="itemBox ${Classname}"> 
+            <span>${taskText}</span>
             <hr>
             <button class="edit-button" onclick="editTask(${index})">Edit</button>
             <button class="delete-button" onclick="deleteTask(${index})">Delete</button>
@@ -71,3 +73,6 @@ function displayTasks() {
         tasklist.appendChild(li);
     });
 }
+
+// Initial display of tasks
+displayTasks();

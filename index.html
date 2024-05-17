@@ -11,26 +11,21 @@
         <h1>Practical Marks Manager</h1>
         <div class="input-container">
             <input type="text" placeholder="Add a new student" id="taskInput">
+            <input type="text" placeholder="Class" class="class">
             <button onclick="addTask()">Add</button>
-            
         </div>
-
 
         <section>
             <ul>
+                <li class="list" data-filter="all">All</li>
                 <li class="list" data-filter="8">Class 8</li>
                 <li class="list" data-filter="9">Class 9</li>
-                <li class="list" data-filter="10"> Class 10</li>
-
+                <li class="list" data-filter="10">Class 10</li>
             </ul>
         </section>
 
-
         <ul id="tasklist"></ul>
     </div>
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
@@ -39,19 +34,15 @@
             $('.list').click(function(){
                 const value = $(this).attr('data-filter');
                 if (value == 'all'){
-                    $('.itemBox').show('1000')
+                    $('.itemBox').show('1000');
                 }
                 else{
-                    $('.itemBox').not('.'+value).hide('1000')
-                    $('.itemBox').filter('.'+value).show('1000')
+                    $('.itemBox').not('.'+value).hide('1000');
+                    $('.itemBox').filter('.'+value).show('1000');
                 }
-            })
-            $('list').click(function(){
                 $(this).addClass('active').siblings().removeClass('active');
             });
-
-
-        })
+        });
     </script>
 
     <script src="main.js"></script>
