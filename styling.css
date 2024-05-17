@@ -1,260 +1,214 @@
-body{
-    background-color: #1d2630;
+body {
+    background-color: #12233d;
     padding: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .container {
-
     max-width: 1280px;
     margin: 30px auto;
-    padding:20px;
-    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    background-color: #1a2a4e;
     border-radius: 8px;
-    text-align:justify;
+    text-align: justify;
+    color: #ffffff;
 }
 
-h1{
-    color:#1d2630;
-    font-size: 24px;
+h1 {
+    color: #ffffff;
+    font-size: 28px;
     margin-bottom: 24px;
+    font-weight: 700;
 }
 
-.input-container{
+.input-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     padding: 10px;
-    
+    background-color: #0e1a33;
+    border-radius: 8px;
 }
 
-a{
-    font-size: 1.5rem;
+a {
+    font-size: 1.2rem;
     font-weight: 600;
     border-radius: 4px;
-    color: rgb(255, 255, 255);
-    border-width: 0%;
-    transition: 1.3s;
-    background: pink;
-    padding: 10px;
-    align-items:center;
-    padding: 10px 10px;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s;
+    background: #004b8d;
+    padding: 10px 15px;
+    text-align: center;
     margin: 12px;
-
 }
 
-.filter-item{
-    font-size: 0.9rem;
-    font-weight: 500;
+a:hover {
+    background: #003366;
+}
+
+.filter-item {
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    color: #ffffff;
+    margin: 5px;
 }
 
-.active-filter{
-    background: var(--second-color);
-    color: var(--bg-color);
+.active-filter {
+    background: #007bff;
+    color: #ffffff;
     padding: 4px 10px;
     border-radius: 4px;
 }
 
-input[type="text"]{
-    max-width: 135px;
+input[type="text"] {
+    max-width: 200px;
     flex-grow: 1;
-    border:none;
-    font-size: 10px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
     outline: none;
     transition: border-color 0.3s ease;
+    margin: 5px 0;
 }
 
-input[type="text"]:focus{
+input[type="text"]:focus {
     border-color: #005b63;
 }
 
-
-.delete-button{
-    background-color: red;
-    color:#fff;
-    border:none;
-    border-radius: 3px;
-    padding: 10px 12px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.4s ease
+/* Add styles for the dropdown menu */
+.class-dropdown {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: #1a2a4e;
+    color: #ffffff;
 }
 
-section{
+.delete-button {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    padding: 8px 12px;
+}
 
-    text-justify: inter-cluster;
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 section ul {
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 10px;
+    padding: 0;
 }
 
-.itemBox{
+.itemBox {
     border: none;
 }
 
-section ul li{
+section ul li {
     list-style: none;
-    background: #1b73bb;
-    padding:10px 12px;
-    margin-left: 10px;
-    margin-right: 10px;
-
-    justify-content: center;
-    justify-items: center;
-    margin:15px;
-    border: 40px;
+    background: #004b8d;
+    padding: 10px 15px;
+    margin: 10px;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-section ul li.active{
+section ul li.active {
     background: #ffc107;
 }
 
-.post{
+section ul li:hover {
+    background: #003366;
+}
+
+.post {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     justify-content: center;
     gap: 1.8rem;
 }
-.edit-button{
+
+.edit-button {
     background-color: #ffc107;
     color: white;
-    border:none;
+    border: none;
     border-radius: 4px;
     padding: 10px 12px;
     font-size: 14px;
     cursor: pointer;
     margin-right: 10px;
-    transition: background-color 0.3 ease;
+    transition: background-color 0.3s ease;
     justify-items: center;
 }
 
+.edit-button:hover {
+    background-color: #e0a800;
+}
 
-button{
+/* Add styles for the marks input element */
+input[type="number"]#marksInput {
+    max-width: 50px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #ffffff;
     border: none;
-    border: 4px;
+    border-radius: 4px;
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
-
 }
 
-button:hover{
+button:hover {
     background-color: #0056b3;
-    margin: 3px;
-    transition: 0.5s;
 }
 
-ul{
+ul {
     list-style: none;
-    padding: 2px;
+    padding: 0;
+    margin: 0;
 }
 
-
-li{
-    display:flex;
+li {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #1a2a4e;
+    border: 1px solid #007bff;
     border-radius: 4px;
     padding: 10px;
     font-size: 16px;
-    
+    color: #ffffff;
 }
-
-
-
-
-@media screen and (max-width:600px) {
-    .container {
-
-        max-width: 400px;
-        margin: 30px auto;
-        padding:17px;
-
-        background-color: rgb(255, 174, 174);
-        border-radius: 8px;
-        text-align:center;
-    }
-
-    .delete-button{
-        background-color: red;
-        color:#fff;
-        border:none;
-        border-radius: 3px;
-        padding: 6px 15px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: background-color 0.4s ease
-    }
-    
-    
-    .edit-button{
-        background-color: #ffc107;
-        color: white;
-        border:none;
-        border-radius: 4px;
-        padding: 5px 12px;
-        font-size: 14px;
-        cursor: pointer;
-        margin-right: 10px;
-        transition: background-color 0.3 ease;
-    }
-    
-
-    .input-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        padding: 10px;
-        
-    }
-    
-    input[type="text"]{
-        flex-grow: 1;
-        padding:10px 4px;
-        border:none;
-        font-size: 14px;
-        outline: none;
-        transition: border-color 0.3s ease;
-    }
-    
-    input[type="text"]:focus{
-        border-color: #005b63;
-    }
-    
-    button{
-        padding: 10px 10px;
-        background-color: #007bff;
-        color: #ffffff;
-        border: none;
-        border: 4px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    
-    
-    }
-    
-    button:hover{
-        background-color: #0056b3;
-        margin: 3px;
-        transition: 0.5s;
-    }
-    
-}
-

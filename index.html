@@ -11,9 +11,19 @@
         <h1>Practical Marks Manager</h1>
         <div class="input-container">
             <input type="text" placeholder="Add a new student" id="taskInput">
-            <input type="text" placeholder="Class" class="class">
-            <button onclick="addTask()">Add</button>
+            <select class="class-dropdown">
+                <option value="">Select Class</option>
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+            </select>
+            <input type="number" id="marksInput">  <button onclick="addTask()">Add</button>
+
+
         </div>
+
+
+        
 
         <section>
             <ul>
@@ -24,7 +34,8 @@
             </ul>
         </section>
 
-        <ul id="tasklist"></ul>
+        <ul id="tasklist">
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
