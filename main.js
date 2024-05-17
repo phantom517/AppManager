@@ -44,7 +44,7 @@ function editTask(index) {
 }
 
 function displayTasks() {
-    tasklist.innerHTML = "";
+    tasklist.innerHTML = "";    
 
     tasks.forEach((task, index) => {
         const li = document.createElement("li");
