@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practical Marks Manager with Sidebar</title>
     <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="style.css" />    <!-- Boxicons CSS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="preloader">
-        <h2>Loading</h2>
-    </div>
-
-
+    <div id="preloader"></div>
     <nav class="sidebar locked">
         <div class="logo_items flex">
             <span class="nav_image">
@@ -65,31 +62,7 @@
         <h2>Marks Manager</h2>
     </nav>
 
-    <div class="container">
-        <h1>Made by Ansu</h1>
-        <div class="input-container">
-            <input type="text" placeholder="Add a new student" id="taskInput">
-            <select class="class-dropdown">
-                <option value="">Select Class</option>
-                <option value="8">Class 8</option>
-                <option value="9">Class 9</option>
-                <option value="10">Class 10</option>
-            </select>
-            <input type="number" id="marksInput">  
-            <button onclick="addTask()">Add</button>
-        </div>
-        
-        <section>
-            <ul>
-                <li class="list" data-filter="all">All</li>
-                <li class="list" data-filter="8">Class 8</li>
-                <li class="list" data-filter="9">Class 9</li>
-                <li class="list" data-filter="10">Class 10</li>
-            </ul>
-        </section>
-
-        <ul id="tasklist"></ul>
-    </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
@@ -107,8 +80,6 @@
                 $(this).addClass('active').siblings().removeClass('active');
             });
         });
-
-
         var loader = document.getElementById('preloader');
 
         window.addEventListener("load",function(){
